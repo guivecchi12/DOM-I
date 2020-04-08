@@ -36,6 +36,7 @@ const siteContent = {
     "copyright" : "Copyright Great Idea! 2018"
   },
 };
+//My note to start
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
