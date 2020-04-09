@@ -118,4 +118,19 @@ navigation.appendChild(newA);
 navigation.prepend(newB);
 
 
+const event = document.querySelector('button');
+event.onclick = function(){myFunction()};
+
+function myFunction(){
+  event.textContent = "YOU CLICKED ME!";
+  function animateBg(i) {
+    document.body.style.backgroundColor = 'hsl(' + i + ', 100%, 50%)';
+    setTimeout(function() {
+      animateBg(++i)
+  }, i);
+  }
+  animateBg(0);
+}
+
+
 
