@@ -120,16 +120,24 @@ navigation.prepend(newB);
 
 const event = document.querySelector('button');
 event.onclick = function(){myFunction()};
+let isOn = true;
+
+let ran = function colorGen(){
+  return Math.floor(Math.random() * 256);
+}
 
 function myFunction(){
-  event.textContent = "YOU CLICKED ME!";
-  function animateBg(i) {
-    document.body.style.backgroundColor = 'hsl(' + i + ', 100%, 50%)';
-    setTimeout(function() {
-      animateBg(++i)
-  }, i);
+  if(isOn === true){
+    event.textContent = "YOU CLICKED ME!";
+    document.body.style.backgroundColor = "rgb(" + ran() + ", "+ ran() + ", " + ran() + ")";
+    isOn = false;
   }
-  animateBg(0);
+  else{
+    event.textContent = "Get Started";
+    document.body.style.backgroundColor = "white";
+    isOn = true;
+  }
+  
 }
 
 
