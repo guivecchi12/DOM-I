@@ -36,8 +36,86 @@ const siteContent = {
     "copyright" : "Copyright Great Idea! 2018"
   },
 };
-//My note to start
+
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+const anchor = document.querySelectorAll('a');
+anchor[0].innerHTML = "Service";
+anchor[1].innerHTML = "Product";
+anchor[2].innerHTML = "Vision";
+anchor[3].innerHTML = "Features";
+anchor[4].innerHTML = "About";
+anchor[5].innerHTML = "Contact";
+
+
+const h1text = document.querySelector("h1");
+h1text.textContent = "DOM IS AWESOME";
+
+const button = document.querySelector("button");
+button.textContent = "Get Started";
+
+const circleImg = document.querySelector("#cta-img");
+circleImg.src = '/img/header-img.png';
+
+const titles = document.querySelectorAll(".text-content h4");
+const verbage = document.querySelectorAll(".text-content p");
+titles[0].textContent = 'Features';
+verbage[0].textContent = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+titles[1].textContent = 'About';
+verbage[1].textContent = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+
+const midImg = document.querySelector("#middle-img");
+midImg.src = '/img/mid-page-accent.jpg';
+
+titles[2].textContent = 'Services';
+verbage[2].textContent = 'Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+titles[3].textContent = 'Product';
+verbage[3].textContent = 'Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+titles[4].textContent = 'Vision';
+verbage[4].textContent = 'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+
+const contact = document.querySelector(".contact h4");
+contact.textContent = "Contact";
+
+const address = document.querySelector(".contact p");
+address.setAttribute('style', 'white-space:pre;');
+address.textContent = "123 Way 456 Street\r\n";
+address.textContent += "Somewhere, USA" ; 
+
+const phone = document.querySelector(".contact p:nth-of-type(2)");
+phone.textContent = "1 (888) 888-8888";
+
+const email = document.querySelector(".contact p:nth-of-type(3)");
+email.textContent = "sales@greatidea.io";
+
+const footer = document.querySelector("footer p");
+footer.textContent = "Copyright Great Idea! 2018"
+
+anchor.forEach((elem)=>{
+  elem.style.color = "green";
+});
+
+const navigation = document.querySelector('nav');
+
+let newA = document.createElement('a');
+newA.href = "#";
+newA.textContent = "newAnchor";
+newA.style.color = "dodgerblue";
+
+let newB = document.createElement('a');
+newB.href = "#";
+newB.textContent = "newPreAnchor";
+newB.style.color = "dodgerblue";
+
+console.log(navigation);
+console.log(newA);
+
+navigation.appendChild(newA);
+navigation.prepend(newB);
+
+
+
