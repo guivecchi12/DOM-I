@@ -53,7 +53,8 @@ anchor[5].innerHTML = "Contact";
 
 
 const h1text = document.querySelector("h1");
-h1text.textContent = "DOM IS AWESOME";
+h1text.setAttribute('style', 'white-space:pre;');
+h1text.textContent = "DOM \nIS \nAWESOME";
 
 const button = document.querySelector("button");
 button.textContent = "Get Started";
@@ -131,10 +132,14 @@ function myFunction(){
     event.textContent = "YOU CLICKED ME!";
     document.body.style.backgroundColor = "rgb(" + ran() + ", "+ ran() + ", " + ran() + ")";
     isOn = false;
+    newA.style.display = "initial";
+    newB.style.display = "initial";
   }
   else{
     event.textContent = "Get Started";
     document.body.style.backgroundColor = "white";
+    newA.style.display = "none";
+    newB.style.display = "none";
     isOn = true;
   }
   
